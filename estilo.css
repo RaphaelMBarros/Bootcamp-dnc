@@ -1,65 +1,216 @@
-/* importação do menu principal */
 
-body {
-    margin: 0px;
-    padding: 0px;
-}
 
-#principal {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: #303030;
-    align-items: center;
+:root {
+    --azul-dnc: #0C70F2;
+    --preto-dnc: #303030;
+    --cinza-hover: #C9C9C9;
 
-    font-family: 'Inter', sans-serif;
-    justify-content: space-between;
-    border-bottom: 1px solid #bababa;
+    --fonte-padrao: 'Inter';
 
 }
 
-   
-    #menu {
+    body {
+        margin: 0px;
+        padding: 0px;
+
+        background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+        background-repeat: no-repeat; 
+
+    }
+    /* Menu de navegação principal */
+
+    #principal {
         display: flex;
-        width: 45%;
-        justify-content: space-around;
-        margin-left: 5%;
+        width: 100%;
+        height: 100px;
+        background-color: var(--preto-dnc);
+        align-items: center;
+
+        font-family: var(--fonte-padrao);
+        justify-content: space-between;
+        border-bottom: 1px solid #bababa;
 
     }
-
-    #principal div a {
-        
-        font-size: 25px;
-        font-weight: 600;
-        color: #FFFFFF;
-    }
-
-        #principal div a:hover {
-            color: #CCCCCC;
-        }        
-
-    a {
-        text-decoration: none;
-    }
-
-    #principal button{
-        margin-right: 5%;
-        width: 80px;
-        height: 40px;
-        border: 0;
-        
-        background-color: #0C70F2;
-    
-        font-family: 'Inter';
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-
-        box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
-        cursor: pointer;
-
-
-    }
-       
 
     
+        #menu {
+            display: flex;
+            width: 45%;
+            justify-content: space-around;
+            margin-left: 5%;
+
+        }
+
+        #principal div a {
+            
+            font-size: 25px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+            #principal div a:hover {
+                color: var(--cinza-hover);
+            }        
+
+        a {
+            text-decoration: none;
+        }
+
+        #principal button{
+            margin-right: 5%;
+            width: 80px;
+            height: 40px;
+            border: 0;
+            
+            background-color: var(--azul-dnc);
+        
+            font-family: var(--fonte-padrao);
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+
+            box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+            cursor: pointer;
+        }
+        
+    /* Seção principal do site */     
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+        header {
+            color: white;
+            font-family: var(--fonte-padrao);
+            
+        }
+
+            header h1{
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 80px;
+                line-height: 97px;
+                margin-bottom: 26px;
+                text-align: center;
+            }
+
+            header h2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 48px;
+                text-align: center;
+                margin-bottom: 191px;
+
+            }
+
+            header .Invert{
+                background-color: black;
+                padding: 3px;
+                border: 0;
+            }
+
+            form {
+                color: white;
+                font-family: var(--fonte-padrao);
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 36px;
+                width: 600px;
+
+                
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+            }
+
+            form input{
+                
+                height: 30px;
+                
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                border: 0;
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            form label{
+                margin: 10px 0px;
+            }
+
+            form input::placeholder{
+                font-family: var(--fonte-padrao);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                
+
+                color: rgba(57, 57, 57, 0.5);
+            }
+
+            #check {
+                margin: 35px 0px 34px 0px;
+            }
+
+            .checkbox-itens label{
+                font-family: var(--fonte-padrao);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 30px;
+
+            }
+
+            .checkbox-itens {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            input[type="checkbox"] {
+                width: 20px;
+                height: 22px;
+                left: 603px;
+                top: 999px;
+
+                background: #FFFFFF;
+                border: 2px solid #CCCCCC;
+                cursor: pointer;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                height: 56px;
+                left: 405px;
+                top: 1465px;
+
+                background: rgba(12, 112, 242, 0.9);
+                box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+                border-radius: 10px;
+
+                margin-top: 82px;
+            }
+
+            input[value="Cadastrar"] {
+                font-family: var(--fonte-padrao);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 39px;
+                color: #FFFFFF;
+
+                cursor: pointer;
+            }
